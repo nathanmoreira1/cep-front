@@ -1,8 +1,8 @@
-import { createStore } from 'vuex';
+import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    cep: '',
+    cep: "",
     address: null,
   },
   mutations: {
@@ -14,26 +14,26 @@ export default createStore({
     },
     resetAddress(state) {
       state.address = null;
-    }
+    },
   },
   actions: {
     async searchCep({ commit }, cep) {
       try {
         const response = await fetch(`http://localhost:8000/cep?cep=${cep}`);
         if (response.ok) {
-            const jsonResponse = await response.json();
-            commit('setAddress', jsonResponse.data);
+          const jsonResponse = await response.json();
+          commit("setAddress", jsonResponse.data);
         } else {
-          alert('CEP não encontrado');
+          alert("CEP não encontrado");
         }
       } catch (error) {
-        alert('Erro ao buscar CEP');
+        alert("Erro ao buscar CEP");
       }
-    }
+    },
   },
   getters: {
     getAddress(state) {
       return state.address;
-    }
-  }
+    },
+  },
 });
