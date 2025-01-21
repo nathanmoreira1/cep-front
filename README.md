@@ -28,6 +28,6 @@ Este projeto é uma aplicação Vue.js que permite a pesquisa de CEPs no Brasil.
 
 4. Acesse a aplicação no navegador em:
    ```bash
-   http://localhost:8001
+   http://localhost:8080
    ```
 
