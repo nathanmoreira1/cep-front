@@ -13,7 +13,7 @@ Este projeto é uma aplicação Vue.js que permite a pesquisa de CEPs no Brasil.
 1. Clone o repositório para sua máquina local:
    ```bash
    git clone git@github.com:nathanmoreira1/cep-front.git
-   cd cep-fron
+   cd cep-front
    ```
    
 2. Instale as dependências do projeto:
